@@ -21,6 +21,6 @@ module.exports = {
   entry,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name]'
   }
 };

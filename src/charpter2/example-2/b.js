@@ -1,5 +1,6 @@
-import {foo} from './b.js';
+import { foo } from './a.js';
 export function bar() {  
-  foo();
-  console.log('bar done');
+  if(Math.random() > 0.5) {
+    foo();
+  }
 }
