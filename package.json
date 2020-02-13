@@ -1,0 +1,21 @@
+{
+  "name": "module-examples",
+  "version": "1.0.0",
+  "description": "module examples",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && webpack --webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shixiaomiaomiao/module-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shixiaomiaomiao/module-examples/issues"
+  },
+  "homepage": "https://github.com/shixiaomiaomiao/module-examples#readme"
+}
