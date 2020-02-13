@@ -1,27 +1,24 @@
 const path = require('path');
 const fs = require('fs');
 
-const files = fs.readdirSync(path.resolve(__dirname));
-let jsFileList = [];
-const dirList = []
+const files = fs.readdirSync(path.resolve(__dirname, 'src'));
+const entry = {};
 files.forEach(fileDir => {
-  fs.stat(fileDir, function(err, stats) {
-    if(stats.isDirectory()) {
-      console.log(fileDir);
-    }
-    
-  });
+  const dirPath = path.join(__dirname, 'src', fileDir);
+  const isDir = fs.statSync(dirPath);
+  if (isDir) {
+    const dirs = fs.readdirSync(dirPath);
+    dirs.forEach(dir => {
+      fs.readdirSync(path.join(dirPath, dir)).forEach(fileName => {
+        entry[`${fileDir}-${dir}-${fileName}`] = path.join(dirPath, dir, fileName)
+      })
+    })
+  }
 });
-
-console.log(jsFileList);
-// const fileMap = path.
 
 module.exports = {
   mode: 'development',
-  entry: {
-    a: './charpter2/example-1/a.js',
-    b: './charpter2/example-1/b.js',
-  },
+  entry,
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
