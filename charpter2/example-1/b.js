@@ -1,5 +1,3 @@
-import {foo} from './b.js';
-export function bar() {  
-  foo();
-  console.log('bar done');
-}
+import {foo} from './a.js';
+console.log(foo);
+setTimeout(() => console.log(foo), 500);

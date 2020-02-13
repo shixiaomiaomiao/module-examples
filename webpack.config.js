@@ -1,4 +1,20 @@
 const path = require('path');
+const fs = require('fs');
+
+const files = fs.readdirSync(path.resolve(__dirname));
+let jsFileList = [];
+const dirList = []
+files.forEach(fileDir => {
+  fs.stat(fileDir, function(err, stats) {
+    if(stats.isDirectory()) {
+      console.log(fileDir);
+    }
+    
+  });
+});
+
+console.log(jsFileList);
+// const fileMap = path.
 
 module.exports = {
   mode: 'development',
