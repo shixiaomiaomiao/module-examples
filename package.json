@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/shixiaomiaomiao/module-examples/issues"
   },
-  "homepage": "https://github.com/shixiaomiaomiao/module-examples#readme"
+  "homepage": "https://github.com/shixiaomiaomiao/module-examples#readme",
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4"
+  }
 }
